@@ -14,7 +14,7 @@
 <div class="alert alert-wa_rning">
 	You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
 </div>
-<![endif]
+<![endif]-->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <div class="row-header">
@@ -25,9 +25,12 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="<?php echo home_url('/'); ?>">
-          <img src="<?php bloginfo('template_url')?>/img/icons/logo-instock_opt.png" alt="Instock"/>
-        </a>
+        <div class="navbar-brand">
+        <?php
+            // Display the Custom Logo
+            the_custom_logo();
+					?>	
+        </div>
       </div>
       <div class="collapse navbar-collapse" id="navbar">
         <?php

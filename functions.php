@@ -14,6 +14,10 @@ require_once locate_template('/functions/plugins.php');
 
 add_action('after_setup_theme', 'true_load_theme_textdomain');
 
+function mytheme_setup() {
+    add_theme_support('custom-logo');
+}
+
 function true_load_theme_textdomain(){
     load_theme_textdomain( 'bst', get_template_directory() . '/languages' );
 }
